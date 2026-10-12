@@ -6,7 +6,7 @@
 ---
 
 ## 🎯 Profile & Research Interests
-I am an undergraduate engineering student passionate about aerothermodynamics and turbomachinery systems (specifically axial/radial compressors and high-pressure turbopumps). Driven by a desire to pursue SME-level expertise in CFD, I actively design and build complex computational workflows, fluid systems, and educational frameworks alongside my formal coursework.
+I am an undergraduate engineering student passionate about aerothermodynamics and turbomachinery systems (specifically axial/radial compressors and high-pressure turbopumps). Driven by a desire to pursue SME-level expertise in turbomachinery and CFD, I actively design and build complex computational workflows, fluid systems, and educational frameworks alongside my formal coursework.
 
 **Current Endeavors:**
 - **Undergraduate Thesis:** Designing and building a low-cost subsonic wind tunnel for ACU's emerging aerospace concentration.
@@ -25,16 +25,16 @@ I am an undergraduate engineering student passionate about aerothermodynamics an
 
 ## 🚀 Featured Projects
 
-### 1. 2-Spool Turbofan Engine: Modular 1D Cycle & 3D CFD Workflow Framework (In Progress)
-**Role:** Project Architect, Team Lead, & Compressor Specialist (Self-Directed Initiative)
+### 1. Subsonic 2-Spool Turbofan: Modular 1D Cycle & 3D CFD Workflow Framework (In Progress)
+**Role:** System Architect, Project Lead, & Technical Authority (Self-Directed Initiative)
 
-* **Overview:** Conceived and organized an unprompted, student-led project to create a repeatable, high-fidelity CFD workflow manual and parameterized benchmark suite for gas turbine components within the ANSYS software ecosystem. Recruited and delegated components across a team of peers to expand the scope from a single compressor stage into a full-engine demonstration suite (Fan, LPC, HPC, LPT, HPT, Diffuser, Combustor, Nozzle).
-* **Scope & Methodology:**
-  * **1D Thermodynamics:** Developed a Python + `CoolProp` script (piece-wise calorically perfect gas model) to establish the single source of truth for engine station pressures ($P_0$), temperatures ($T_0$), and mass flow rates ($\dot{m}$) at Mach 0.85 / 30,000 ft cruise.
-  * **Meanline & Geometry:** Derived non-dimensional stage loading ($\psi$), flow coefficient ($\phi$), reaction ($R$), and meanline velocity triangles to initialize 3D blade profiles via Vista AFD and BladeGen.
-  * **Rotating Machinery Pipeline:** Designed the **Vista AFD $\rightarrow$ BladeGen $\rightarrow$ TurboGrid $\rightarrow$ ANSYS CFX** pipeline using structured hexahedral meshes ($y^+ \approx 1$) and $k-\omega$ SST closure to model representative single stages with steady-state Stage/Mixing Plane interfaces.
-  * **Combustion & Ducts:** Integrated 3D combustor sector models in ANSYS Fluent with imported Chemkin finite-rate kinetics to map thermal fields, Pattern Factor ($PF$), and $NO_x/CO$ emissions.
-* **Key Deliverables:** Step-by-step tutorial manual, parameterized Workbench templates (`.wbpz`), automated performance map generation (${\pi}_{tt}$ and $\eta_{is}$ vs. $\dot{m}_{corr}$), and cross-verification of 1D design targets against 3D CFD diagnostics.
+- **Overview:** Conceiving, architecting, and directing a student-led initiative to build a repeatable, high-fidelity CFD workflow manual and parameterized benchmark suite for gas turbine components within the ANSYS software ecosystem. Designing the end-to-end multi-pipeline system architecture (CFX rotating turbomachinery, Fluent static ducts, and Fluent/Chemkin combustion) and leading a 4-person team executing parallel component demonstrations across representative Fan, Compressor, Turbine, Duct, and Combustor modules. Serving as the lead technical authority with final sign-off authority on all mesh quality gates, solver convergence parameters, and project deliverables.
+- **Scope & System Architecture:**
+  * **System Architecture & 1D Cycle:** Authoring the master Python + `CoolProp` thermodynamic cycle script (piece-wise calorically perfect gas model) to establish engine station boundary conditions ($P_0, T_0, \dot{m}$ at Mach 0.85 / 30,000 ft) and designing standardized Workbench master templates (`.wbpz`) for automated performance mapping and parameter sweeps.
+  * **Module A Pipeline (Rotating Machinery):** Establishing the **Vista AFD → BladeGen → TurboGrid → ANSYS CFX** standard ($y^+ \le 1$, $k-\omega\text{ SST}$, mixing planes) executed across representative Fan, Core Compressor, and Turbine stages.
+  * **Module B Pipeline (Static Ducts):** Establishing the **Inventor → SpaceClaim → Fluent Meshing → ANSYS Fluent** standard ($y^+ \le 1$, $k-\omega\text{ SST}$) executed for intake diffuser and exhaust nozzle geometries.
+  * **Module C Pipeline (Combustion):** Co-leading the 3D combustor sector setup in ANSYS Fluent integrated with imported Chemkin finite-rate kinetics (Realizable $k-\epsilon$, $y^+ \approx 30\text{--}100$) utilizing Volumetric Reactions to evaluate flame anchoring, primary recirculation zones, and exit thermal profiles.
+- **Target Deliverables:** Authoring and editing the comprehensive student-facing ANSYS Turbomachinery & Combustion Workflow Manual, enforcing quality control across component convergence logs, generating automated component performance maps ($\pi_{tt}, \eta_{is}$ vs. $\dot{m}_{corr}$), and conducting side-by-side verification of 1D design targets against 3D CFD diagnostics.
 
 ---
 
